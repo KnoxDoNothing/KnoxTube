@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youtube.com Clone</title>
+    <title>Welcom KnoxTube</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,20 +21,20 @@
     <!--Header-->
     <header class="header">
       <div class="left-section">
-        <img class="hamburger-menu" src="icons/hamburger-menu.svg" alt="" />
-        <img class="youtube-logo" src="icons/youtube-logo.svg" alt="" />
+        <img class="hamburger-menu" src="images/icons/hamburger-menu.svg" alt="" />
+        <img class="youtube-logo" src="images/icons/youtube-logo.svg" alt="" />
       </div>
 
       <div class="middle-section">
         <input class="search-bar" type="search" placeholder="Search" />
         <button class="search-button">
-          <img class="search-icon" src="icons/search.svg" alt="" />
+          <img class="search-icon" src="images/icons/search.svg" alt="" />
           <div class="tooltip">Search</div>
         </button>
         <button class="voice-search-button">
           <img
             class="voice-search-icon"
-            src="icons/voice-search-icon.svg"
+            src="images/icons/voice-search-icon.svg"
             alt=""
           />
           <div class="tooltip">Search with your voice</div>
@@ -43,19 +43,19 @@
 
       <div class="right-section">
         <div class="upload-container">
-          <img class="upload-icon" src="icons/upload.svg" alt="" />
+          <img class="upload-icon" src="images/icons/upload.svg" alt="" />
           <div class="tooltip">Create</div>
         </div>
         
         <div class="youtube-apps-container">
-          <img class="youtube-apps-icon" src="icons/youtube-apps.svg" alt="" />
+          <img class="youtube-apps-icon" src="images/icons/youtube-apps.svg" alt="" />
           <div class="tooltip">YouTube apps</div>
         </div>
 
         <div class="notifications-icon-container">
           <img
             class="notifications-icon"
-            src="icons/notifications.svg"
+            src="images/icons/notifications.svg"
             alt=""
           />
           <div class="notifications-count">3</div>
@@ -64,7 +64,7 @@
         </div>
         <img
           class="current-user-picture"
-          src="channel-pictures/my-channel.jpeg"
+          src="images/channel-pictures/my-channel.jpeg"
           alt=""
         />
       </div>
@@ -73,37 +73,39 @@
 <!--Navigation-->
     <nav class="sidebar">
       <div class="sidebar-link">
-        <img src="icons/home.svg" alt="" />
+        <img src="images/icons/home.svg" alt="" />
         <div>Home</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/explore.svg" alt="" />
+        <img src="images/icons/explore.svg" alt="" />
         <div>Explore</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/subscriptions.svg" alt="" />
+        <img src="images/icons/subscriptions.svg" alt="" />
         <div>Subscriptions</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/originals.svg" alt="" />
+        <img src="images/icons/originals.svg" alt="" />
         <div>Originals</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/youtube-music.svg" alt="" />
+        <img src="images/icons/youtube-music.svg" alt="" />
         <div>Youtube Music</div>
       </div>
       <div class="sidebar-link">
-        <img src="icons/library.svg" alt="" />
+        <img src="images/icons/library.svg" alt="" />
         <div>Library</div>
       </div>
     </nav>
 
     <!--Main Section-->
-    <main>
-    <section class="video-grid">
+  <main>
+    
+    <section class="video-grid js-video-grid">
+      <!--
       <div class="video-preview">
         <div class="thumbnail-row">
-          <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="img1" />
+          <img class="thumbnail" src="thumbnails/thumbnail-1.webp" alt="img1"/>
           <div class="video-time">14:20</div>
         </div>
 
@@ -257,8 +259,12 @@
           </div>
         </div>
       </div>
+      -->
     </section>
+    
   </main>
+
+  <script type="module" src="scripts/index.js"></script>
 
   </body>
 </html>
