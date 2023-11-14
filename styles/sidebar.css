@@ -9,6 +9,8 @@
 padding-top: 3px;
 
 
+
+
 }
 
 .sidebar-link{
@@ -28,7 +30,8 @@ cursor: pointer;
 }
 
 .sidebar-link img{
-height: 24px;
+width: 65px;
+
 margin-bottom: 4px;
 }
 

@@ -1,55 +1,85 @@
 import { videos } from "../data/videos.js";
 
-let videoHTML = `
-<div class="video-preview js-video-preview ">
+import { icons } from "./header.js";
+
+import { logos } from "./sidebar.js";
+
+let headerHTML=``;
+
+icons.forEach(icon=>{
+  headerHTML+=`
+    <div class="middle-container">
+      <img class="middle-icon" src=${icon.url} alt="" />
+      <div class="tooltip">${icon.tooltip}</div>
+    </div>
+`;
+})
+
+let sidebarHTML=``;
+
+logos.forEach(logo=>{
+  sidebarHTML +=`
+      <div class="sidebar-link">
+        <img src=${logo.url} />
+        <div>${logo.duration}</div>
+      </div>
+  
+  `;
+
+})
+
+
+let videosHTML =``;
+
+
+videos.forEach(video=>{
+videosHTML += `
+<div class="video-preview">
 
   <div class="thumbnail-row">
-    <img class="thumbnail" src="images/thumbnails/thumbnail-1.webp"/>
-    <div class="video-time">14:20</div>
+    <video class="video-thumbnail" controls controlslist="nodownload" >
+      <source src=${video.url} type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-time">${video.time}</div>
   </div>
 
   <div class="video-info-grid">
     <div class="channel-picture">
       <img
         class="profile-picture"
-        src="images/channel-pictures/channel-1.jpeg"
+        src=${video.img}
         alt=""
       />
     </div>
 
-    <div class="video-info js-video-info">
+    <div class="video-info">
       <p class="video-title">
-        Talking Tech and AI with Google CEO Sundar Pichai!
+       ${video.title}
       </p>
 
-      <p class="video-author">Marques Brownlee</p>
+      <p class="video-author">${video.author}</p>
 
-      <p class="video-stats">3.4M views &#183; 6 months ago</p>
+      <p class="video-stats">${video.stats}</p>
     </div>
 
   </div>
+
 </div>
-
-
-<video class="thumbnail" controls controlslist="nodownload">
-    <source src="videos/cat.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
-
-<video class="thumbnail" controls controlslist="nodownload">
-    <source src="videos/cat.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
 `
-;
+})
 
-document.querySelector('.js-video-grid').innerHTML = videoHTML;
+headerHTML +=`<img class="current-user-picture" src="images/icons/headshot.png"/>`;
+console.log(sidebarHTML);
+
+
+document.querySelector('.js-right-section').innerHTML =headerHTML;
+document.querySelector('.js-sidebar').innerHTML= sidebarHTML;
+document.querySelector('.js-video-grid').innerHTML = videosHTML;
+
 
 document.querySelectorAll('.js-video-preview ').forEach(thumbnail=>{
   thumbnail.addEventListener('click',()=>{
     console.log('ok');
   });
 })
-
-
-

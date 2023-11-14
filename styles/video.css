@@ -7,6 +7,26 @@
   cursor: pointer;
 }
 
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+  
+}
+
+.video-thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-thumbnail {
+  width: 100%;
+  
+}
+
+.video-thumbnail:hover{
+  cursor: pointer;
+}
+
 .channel-picture {
 }
 .video-info {
@@ -36,11 +56,9 @@
 
 .video-preview {
   margin-bottom: 12px;
+  border: 1px solid black;
 }
-.thumbnail-row {
-  margin-bottom: 8px;
-  position: relative;
-}
+
 .video-stats,
 .video-author {
   font-size: 12px;
@@ -53,33 +71,44 @@
 .video-info-grid {
   display: grid;
   grid-template-columns: 50px 1fr;
+  border: 1px solid black;
+  
 }
 
 .video-grid {
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr) ;
   column-gap: 16px;
   row-gap: 40px;
 }
 
+@media (max-width: 1600px) {
+  .video-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .video-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 750px) {
   .video-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-@media (min-width: 751px) and (max-width: 999px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
 
-@media (min-width: 1000px) {
-  .video-grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
+
 
 
 .video-time {
